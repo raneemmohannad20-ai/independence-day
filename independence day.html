@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استقلال المملكة الهاشمية 80</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-pink: #FF69B4;
+            --dark-pink: #C71585;
+            --soft-bg: #fff5f8;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffffff 0%, #fff0f5 100%);
+            color: #2d3436;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* حركات الدخول */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .pink-title {
+            color: var(--main-pink);
+            font-size: 4rem;
+            font-weight: 900;
+            text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.2);
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -50px auto 50px auto;
+            padding: 20px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            border: 1px solid grab(255, 105, 180, 0.1);
+            transition: all 0.4s ease;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 105, 180, 0.15);
+            border-color: var(--main-pink);
+        }
+
+        h2 {
+            color: var(--dark-pink);
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(to left, var(--main-pink), transparent);
+        }
+
+        /* تنسيق الصور الاحترافي */
+        .image-box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .image-box img {
+            width: 100%;
+            transition: transform 0.6s ease;
+        }
+
+        .image-box:hover img {
+            transform: scale(1.05);
+        }
+
+        /* زر تفاعلي */
+        .btn-celebrate {
+            background: var(--main-pink);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        .btn-celebrate:hover {
+            background: var(--dark-pink);
+            letter-spacing: 1px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #2d3436;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="font-size: 5rem;">🇯🇴</div>
+        <h1 class="pink-title">وطن الاستقلال</h1>
+        <p style="color: #636e72; font-size: 1.5rem; letter-
+spacing: 2px;">حكاية فخر .. ومسيرة مجد</p>
+    </header>
+    <div class="container">
+        <div class="info-card">
+            <h2>📜 نبض التاريخ</h2>
+            <p>يوم الاستقلال ليس مجرد تاريخ، بل هو حكاية فخر بدأت في عام 1946م، عندما أشرقت شمس الحرية على مملكتنا
+                الغالية. في هذا اليوم، نعاهد الوطن والقائد على الاستمرار في مسيرة البناء والعطاء ليبقى الأردن شامخاً
+                بجهود أبنائه وتكنولوجيا مستقبله.</p>
+        </div>
+        <div class="info-card">
+            <h2>📸 معرض الاعتزاز</h2>
+            <div class="image-box"> <img src="صورة الملك.jpg" alt="سيد البلاد"> </div>
+            <p style="text-align: center; margin-top: 10px; font-style: italic;">الاستقلال مسيرة مستمرة من �
+                 العمل والإنجاز"</p>
+        </div>
+        <div class="info-card" style="text-align: center;">
+            <h2>🎉 شاركنا الفرحة</h2>
+            <p>اضغط على الزر لنحتفل معاً بيوم الاستقلال!</p> <button class="btn-celebrate" onclick="celebrate()">أطلق
+                الاحتفال!</button>
+        </div>
+    </div>
+    <footer>
+        <p>تم تطويره بكل فخر للمشاركة في مسابقة توظيف التكنولوجيا</p>
+        <p>إعداد الطالبة: رنيم</p>
+    </footer>
+    <script>        function celebrate() { alert("كل عام والوطن وأهله بألف خير! 🇯🇴✨"); }    </script>
+</body>
+
+</html>
